@@ -16,7 +16,7 @@
 			</li>
 			<li>Jeroen Wijering
 				<em><small> (The State of HTML5 Video)</small></em>
-			</li>w
+			</li>
 	</ul>
 	</section>
 
