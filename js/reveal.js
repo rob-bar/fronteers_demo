@@ -1093,12 +1093,12 @@ var Reveal = (function(){
 	 * @param {Object} event
 	 */
 	function onDocumentKeyDown( event ) {
-		// Check if there's a focused element that could be using 
+		// Check if there's a focused element that could be using
 		// the keyboard
 		var activeElement = document.activeElement;
     	var hasFocus = !!( document.activeElement && ( document.activeElement.type || document.activeElement.href || document.activeElement.contentEditable !== 'inherit' ) );
 
-		// Disregard the event if there's a focused element or a 
+		// Disregard the event if there's a focused element or a
 		// keyboard modifier key is present
 		if ( hasFocus || event.shiftKey || event.altKey || event.ctrlKey || event.metaKey ) return;
 

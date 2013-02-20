@@ -22,7 +22,7 @@
 		<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
-
+		<script></script>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -33,7 +33,10 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<?php foreach (glob("slides/*.php") as $filename): ?>
+				<?php //foreach (glob("slides_kris/*.php") as $filename): ?>
+					<?php //include $filename; ?>
+				<?php //endforeach ?>
+				<?php foreach (glob("slides_robbie/*.php") as $filename): ?>
 					<?php include $filename; ?>
 				<?php endforeach ?>
 			</div>
@@ -42,7 +45,7 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-
+		<script src="js/highlight.js"></script>
 		<script>
 
 			// Full list of configuration options available here:
@@ -67,6 +70,21 @@
 			});
 
 		</script>
+		<script src="js/jquery.min.js"></script>
+<script>
+  $('script[type="data/example"]').each(function() {
+    var script = $(this);
+    var src = script.attr('src')
+    var div = script.parent();
 
+    var dest = $('<pre class="language-javascript" style="font-size: 0.40em;">');
+    var code = $('<code contenteditable="true">').appendTo(dest);
+
+    $.ajax(src, { dataType : 'text'}).done(function(content) {
+      code.text(content);
+      window.hljs.highlightBlock( dest.appendTo(div)[0] );
+    });
+  });
+</script>
 	</body>
 </html>
