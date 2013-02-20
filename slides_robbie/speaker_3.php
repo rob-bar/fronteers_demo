@@ -1,7 +1,7 @@
 <section>
   <section>
     <br><br><br><br>
-    <h2>PRebecca Murphey</h2>
+    <h2>Rebecca Murphey</h2>
     <h3>JS dev at Bazaarvoice</h3>
   </section>
 
